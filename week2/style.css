@@ -1,0 +1,54 @@
+* {
+  letter-spacing: normal;
+  line-height: 2pc;
+}
+body {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(255, 235, 255);
+}
+h1 {
+  color: aqua;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Mozilla Headline", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h2 {
+  color: blue;
+  border: 2px solid black;
+}
+p {
+  color: whitesmoke;
+  text-align: left;
+}
+
+.blue-color {
+  color: rgb(255, 255, 255);
+}
+/* because its good */
+#purple-color,
+h3 {
+  color: purple;
+  background-color: rgb(255, 255, 255);
+}
+section {
+  text-align: center;
+  border: 2px solid blueviolet;
+  margin-bottom: 20px;
+  background-color: rgb(10, 39, 94);
+}
+h2,
+h3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+main {
+  font-size: 1rem;
+}
