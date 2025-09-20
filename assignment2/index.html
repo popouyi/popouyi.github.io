@@ -3,71 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- add the font family of your choice -->
-    <link rel="stylesheet" href="reset.css" />
+    <title>Custom Media Player (SVG Icons)</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- Header Section -->
     <header>
-      <h1>Media Player Website</h1>
+      <h1>🎬 Custom Media Player</h1>
     </header>
 
-    <!-- Navigation Section -->
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Playlists</a></li>
-        <!-- Add or remove navigation items as needed -->
-      </ul>
-    </nav>
+    <div class="player-container">
+      <!-- Video -->
+      <video id="myVideo" preload="metadata">
+        <source
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
 
-    <!-- Main Content Section -->
-    <main class="container">
-      <!-- Media Player Section -->
-      <div class="media-player">
-        <video id="custom-video-player" controls>
-          <source
-            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-            type="video/mp4"
+      <div class="controls">
+        <button id="playPause">
+          <!-- Play icon -->
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
+            alt=""
+            id="play-pause-img"
           />
-        </video>
-        <div class="custom-controls">
-          <button id="play-pause-btn" onclick="togglePlayPause()">
-            <img
-              id="play-pause-img"
-              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
-              alt="Play Button"
-              width="24"
-              height="24"
-            />
-          </button>
-          <!-- add the missing buttons or functionality here -->
-          <div class="progress-bar">
-            <span id="progress-bar-fill"></span>
-          </div>
-        </div>
+        </button>
+
+        <button id="rewind">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="white" d="M11 18V6l-8.5 6L11 18zm1-12v12l8.5-6L12 6z" />
+          </svg>
+        </button>
+
+        <button id="forward">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/fast-forward.png"
+            alt=""
+            id="fast-forward-img"
+          />
+        </button>
+
+        <button id="mute">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+            alt=""
+            id="mute-unmute-img"
+          />
+        </button>
+
+        <button id="fullscreen">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/full-screen--v1.png"
+            alt=""
+            id="fullscreen-img"
+          />
+        </button>
       </div>
+    </div>
 
-      <!-- Additional Content Section -->
-      <section>
-        <h2>Additional Content</h2>
-        <p>This is where you can showcase any other relevant content.</p>
-        <!-- Add more content as needed -->
-      </section>
-    </main>
+    <footer>© 2025 Custom Media Player. Built with ❤️</footer>
 
-    <!-- Footer Section -->
-    <footer>
-      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
