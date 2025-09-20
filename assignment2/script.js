@@ -35,14 +35,15 @@ function toggleVideo() {
 }
 
 // Rewind 10s
-rewindButton.addEventListener("click", () => {
+rewindButton.addEventListener("click", rewindVideo);
+function rewindVideo() {
   video.currentTime = Math.max(0, video.currentTime - 10);
-});
-
+}
 // Forward 10s
-forwardButton.addEventListener("click", () => {
+forwardButton.addEventListener("click", forwardVideo);
+function forwardVideo() {
   video.currentTime = Math.min(video.duration, video.currentTime + 10);
-});
+}
 
 // Toggle mute
 muteButton.addEventListener("click", toggleAudio);
@@ -58,12 +59,12 @@ function toggleAudio() {
 }
 
 // Fullscreen
-fullscreenButton.addEventListener("click", () => {
-  if (video.requestFullscreen) {
-    video.requestFullscreen();
-  } else if (video.webkitRequestFullscreen) {
-    video.webkitRequestFullscreen();
-  } else if (video.msRequestFullscreen) {
-    video.msRequestFullscreen();
+fullscreenButton.addEventListener("click", goFullScreen);
+myVideo.addEventListener("dblclick", goFullScreen);
+function goFullScreen() {
+  if (!document.fullscreenElement) {
+    myVideo.requestFullscreen();
+  } else {
+    document.exitFullscreen();
   }
-});
+}
