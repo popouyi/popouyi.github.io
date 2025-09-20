@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>🎬 Custom Media Player</h1>
-    </header>
 
     <div class="player-container">
       <!-- Video -->
@@ -20,8 +17,11 @@
         />
         Your browser does not support the video tag.
       </video>
-
+<div class="progress-bar">
+  <span id="progress-bar-fill"></span>
+</div>
       <div class="controls">
+        
         <button id="playPause">
           <!-- Play icon -->
           <img
@@ -62,10 +62,22 @@
             id="fullscreen-img"
           />
         </button>
+       
       </div>
     </div>
 
-    <footer>© 2025 Custom Media Player. Built with ❤️</footer>
+    <footer>
+        <p class="attribution">
+    "<a target="_blank" rel="noopener noreferrer" href="https://www.jamendo.com/track/739121">CHAABI MAROC MIX</a>" by 
+    <a target="_blank" rel="noopener noreferrer" href="https://www.jamendo.com/artist/367146/CHAABI_MIX">CHAABI MIX</a> is licensed under 
+    <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/3.0/?ref=openverse">CC BY-NC-SA 3.0 
+      <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+      <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+      <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+      <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    </a>. 
+  </p>
+    </footer>
 
     <script src="script.js"></script>
   </body>

@@ -5,8 +5,6 @@ const video = document.querySelector("#myVideo");
 console.log(video);
 const playPauseButton = document.querySelector("#playPause");
 console.log(playPauseButton);
-const stopButton = document.querySelector("#stop");
-console.log(stopButton);
 const rewindButton = document.querySelector("#rewind");
 console.log(rewindButton);
 const forwardButton = document.querySelector("#forward");
@@ -19,6 +17,8 @@ const playPauseImg = document.querySelector("#play-pause-img");
 console.log(playPauseImg);
 const muteUnmuteImg = document.querySelector("#mute-unmute-img");
 console.log(muteUnmuteImg);
+const progressBarFill = document.querySelector("#progress-bar-fill");
+console.log(progressBarFill);
 // ---------------------------------------------------------------------
 
 // -----Main Functionality---------------------------------------------------------
@@ -78,6 +78,13 @@ function goFullScreen() {
   } else {
     document.exitFullscreen();
   }
+}
+
+// progress bar update
+video.addEventListener("timeupdate", updateProgressBar);
+function updateProgressBar() {
+  const percentage = (video.currentTime / video.duration) * 100;
+  progressBarFill.style.width = percentage + "%";
 }
 
 // -----------------------------------------------------------------------------
