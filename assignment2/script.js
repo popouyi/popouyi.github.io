@@ -21,8 +21,9 @@ const muteUnmuteImg = document.querySelector("#mute-unmute-img");
 console.log(muteUnmuteImg);
 // ---------------------------------------------------------------------
 
-// Toggle play/pause
+// -----Main Functionality---------------------------------------------------------
 
+// Toggle play/pause
 playPauseButton.addEventListener("click", toggleVideo);
 function toggleVideo() {
   if (video.paused || video.ended) {
@@ -34,18 +35,28 @@ function toggleVideo() {
   }
 }
 
-// Rewind 10s
-rewindButton.addEventListener("click", rewindVideo);
-function rewindVideo() {
-  video.currentTime = Math.max(0, video.currentTime - 10);
-}
-// Forward 10s
-forwardButton.addEventListener("click", forwardVideo);
+// Forward ( I added a double click event to forward 10 seconds
+// and a single click event to forward 5 seconds, to give more control to the user)
+forwardButton.addEventListener("click", forwardVideo5);
+forwardButton.addEventListener("dblclick", forwardVideo);
 function forwardVideo() {
   video.currentTime = Math.min(video.duration, video.currentTime + 10);
 }
+function forwardVideo5() {
+  video.currentTime = Math.min(video.duration, video.currentTime + 5);
+}
 
-// Toggle mute
+// Rewind ( I also added the same thing as the forward button )
+rewindButton.addEventListener("click", rewindVideo5);
+rewindButton.addEventListener("dblclick", rewindVideo);
+function rewindVideo() {
+  video.currentTime = Math.max(0, video.currentTime - 10);
+}
+function rewindVideo5() {
+  video.currentTime = Math.max(0, video.currentTime - 5);
+}
+
+// Mute/Unmute
 muteButton.addEventListener("click", toggleAudio);
 function toggleAudio() {
   if (video.muted) {
@@ -68,3 +79,5 @@ function goFullScreen() {
     document.exitFullscreen();
   }
 }
+
+// -----------------------------------------------------------------------------
