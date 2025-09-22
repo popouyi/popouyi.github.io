@@ -56,7 +56,7 @@ function rewindVideo5() {
   video.currentTime = Math.max(0, video.currentTime - 5);
 }
 
-// Mute/Unmute
+// Mute/Unmute ( I followed the same logic as the one we learned in class on week 8)
 muteButton.addEventListener("click", toggleAudio);
 function toggleAudio() {
   if (video.muted) {
@@ -69,7 +69,7 @@ function toggleAudio() {
   }
 }
 
-// Fullscreen
+// Fullscreen ( same goes for the fullscreen logic)
 fullscreenButton.addEventListener("click", goFullScreen);
 myVideo.addEventListener("dblclick", goFullScreen);
 function goFullScreen() {

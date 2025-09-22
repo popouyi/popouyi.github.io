@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
+    <!-- separated the different parts of the HTML with different <div> tags, 
+      so that it's easier to stylise and organise too -->
     <div class="player-container">
-      <!-- Video -->
       <video id="myVideo" preload="metadata">
         <source
           src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
@@ -17,18 +17,32 @@
         />
         Your browser does not support the video tag.
       </video>
-<div class="progress-bar">
-  <span id="progress-bar-fill"></span>
-</div>
+      <h2>MIAC.mp4 - Music Video</h2>
+      <div class="progress-bar">
+        <span id="progress-bar-fill"></span>
+      </div>
       <div class="controls">
-        
-       
-
+        <!-- Arranged the buttons similiarly like usual media players
+          to create a more organised look -->
+        <button id="mute">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+            alt=""
+            id="mute-unmute-img"
+          />
+        </button>
         <button id="rewind">
           <img
             src="https://img.icons8.com/ios-glyphs/30/rewind.png"
             alt=""
             id="rewind-img"
+          />
+        </button>
+        <button id="playPause">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
+            alt=""
+            id="play-pause-img"
           />
         </button>
 
@@ -40,23 +54,6 @@
           />
         </button>
 
- <button id="playPause">
-          <!-- Play icon -->
-          <img
-            src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
-            alt=""
-            id="play-pause-img"
-          />
-        </button>
-        
-        <button id="mute">
-          <img
-            src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
-            alt=""
-            id="mute-unmute-img"
-          />
-        </button>
-
         <button id="fullscreen">
           <img
             src="https://img.icons8.com/ios-glyphs/30/full-screen--v1.png"
@@ -64,21 +61,14 @@
             id="fullscreen-img"
           />
         </button>
-       
       </div>
     </div>
 
     <footer>
-        <p class="attribution">
-    "<a target="_blank" rel="noopener noreferrer" href="https://www.jamendo.com/track/739121">CHAABI MAROC MIX</a>" by 
-    <a target="_blank" rel="noopener noreferrer" href="https://www.jamendo.com/artist/367146/CHAABI_MIX">CHAABI MIX</a> is licensed under 
-    <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/3.0/?ref=openverse">CC BY-NC-SA 3.0 
-      <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
-      <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
-      <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
-      <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
-    </a>. 
-  </p>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/icons8" title="Icons8"
+        >Icons8</a
+      >
     </footer>
 
     <script src="script.js"></script>
