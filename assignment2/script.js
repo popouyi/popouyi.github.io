@@ -12,6 +12,8 @@ console.log(forwardButton);
 const muteButton = document.querySelector("#mute");
 console.log(muteButton);
 const fullscreenButton = document.querySelector("#fullscreen");
+const replayButton = document.querySelector("#replay-img");
+console.log(replayButton);
 console.log(fullscreenButton);
 const playPauseImg = document.querySelector("#play-pause-img");
 console.log(playPauseImg);
@@ -19,6 +21,9 @@ const muteUnmuteImg = document.querySelector("#mute-unmute-img");
 console.log(muteUnmuteImg);
 const progressBarFill = document.querySelector("#progress-bar-fill");
 console.log(progressBarFill);
+const loopButton = document.querySelector("#loop-img");
+console.log(loopButton);
+
 // ---------------------------------------------------------------------
 
 // -----Main Functionality---------------------------------------------------------
@@ -85,6 +90,27 @@ video.addEventListener("timeupdate", updateProgressBar);
 function updateProgressBar() {
   const percentage = (video.currentTime / video.duration) * 100;
   progressBarFill.style.width = percentage + "%";
+}
+
+// Replay
+replayButton.addEventListener("click", replayVideo);
+function replayVideo() {
+  video.currentTime = 0;
+  video.play();
+  playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v1.png";
+}
+
+// Loop video ( For the additional feature, i decided to add a loop button that allows the user to loop the video)
+// For the loop logic, I followed the same logic as the mute/unmute and play/pause button
+loopButton.addEventListener("click", toggleLoop);
+function toggleLoop() {
+  if (video.loop) {
+    video.loop = false;
+    loopButton.src = "https://img.icons8.com/ios-glyphs/30/repeat.png";
+  } else {
+    video.loop = true;
+    loopButton.src = "https://img.icons8.com/ios-glyphs/30/repeat.png";
+  }
 }
 
 // -----------------------------------------------------------------------------
