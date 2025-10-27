@@ -61,10 +61,8 @@ const characters = [
 
 // Team setup - I made it hold 4 characters (instead of 5 like some games),
 // because it keeps team composition tighter and avoids unbalanced setups.
-// I saw this 4-slot system idea in a YouTube game dev channel called "Dev Ed".
 let selectedTeam = [null, null, null, null];
 let draggedCharacter = null; // Keeps track of which character card is currently being dragged
-let sortByLevel = false; // Later can be used to toggle sorting between name/level
 // ------------------------------------------------------------------------
 
 // -----Character List Creation--------------------------------------------
