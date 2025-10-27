@@ -1,9 +1,9 @@
 // ------------------------------------------------------------------------
-// TEAM SELECTION SYSTEM - CHARACTER MANAGEMENT + DRAG & DROP FUNCTIONALITY
+// TEAM SELECTION SYSTEM, CHARACTER MANAGEMENT + DRAG & DROP FUNCTIONALITY
 // ------------------------------------------------------------------------
 // This is my complete team selection system for a small RPG-style game UI.
 // I used ideas I saw in YouTube tutorials about drag-and-drop mechanics,
-//    - "Vanilla JavaScript Project: Team Picker Game UI" by Dev Ed
+// "Vanilla JavaScript Project: Team Picker Game UI" by Dev Ed
 // plus some tweaks I made myself after testing and debugging multiple times.
 // ------------------------------------------------------------------------
 
@@ -12,7 +12,7 @@
 // I organized the characters inside an array so that I can easily loop through them
 // and dynamically create character cards in the DOM (instead of hardcoding HTML).
 // I followed this technique from a front-end tutorial I watched on YouTube about
-// "Creating draggable cards with vanilla JavaScript" – it made everything cleaner.
+// "Creating draggable cards with vanilla JavaScript" it made everything cleaner.
 // I learned this data structure approach from a video called
 // “JavaScript Objects and Arrays Explained” by Programming with Mosh.
 const characters = [
@@ -59,7 +59,7 @@ const characters = [
   },
 ];
 
-// Team setup - I made it hold 4 characters (instead of 5 like some games),
+// Team setup, I made it hold 4 characters (instead of 5 like some games),
 // because it keeps team composition tighter and avoids unbalanced setups.
 let selectedTeam = [null, null, null, null];
 let draggedCharacter = null; // Keeps track of which character card is currently being dragged
@@ -68,7 +68,7 @@ let draggedCharacter = null; // Keeps track of which character card is currently
 // -----Character List Creation--------------------------------------------
 // This function dynamically creates all the character cards at the bottom section.
 // I learned about using `document.createElement()` and template literals together
-// from a YouTube video by "Web Dev Simplified" — it made DOM creation so much easier!
+// from a YouTube video by "Web Dev Simplified",  it made DOM creation so much easier!
 // Each character becomes a draggable card with color, image, and level.
 function initCharacterList() {
   const characterList = document.getElementById("characterList");
@@ -112,7 +112,7 @@ function initCharacterList() {
 
 // -----Drag and Drop System-----------------------------------------------
 // This section manages dragging characters from the list into the team slots.
-// I used the native HTML5 drag and drop API for this — it was confusing at first,
+// I used the native HTML5 drag and drop API for this,  it was confusing at first,
 // but I figured it out after watching multiple videos on it (especially on Fireship).
 // The idea is simple: dragstart stores which character is being moved, and drop places it.
 
@@ -182,7 +182,7 @@ function handleDrop(e) {
 // This part refreshes the team slots every time a character is added, moved, or removed.
 // It dynamically creates HTML content for each slot based on `selectedTeam`.
 // I learned about dynamically updating UIs in a YouTube crash course on
-// "DOM Manipulation in JavaScript" — it’s all about replacing innerHTML smartly.
+// "DOM Manipulation in JavaScript" it’s all about replacing innerHTML smartly.
 function updateTeamDisplay() {
   const slots = document.querySelectorAll(".slot");
   slots.forEach((slot, index) => {

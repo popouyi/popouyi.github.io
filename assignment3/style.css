@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------- */
-/* GLOBAL STYLING - CLEAN VISUAL BASELINE */
+/* GLOBAL STYLING, CLEAN VISUAL BASELINE */
 /* ------------------------------------------------------------- */
 /* Simple background color choice for a friendly and vibrant look.
    Cornflowerblue gives a soft contrast against white and character colors. */
@@ -19,7 +19,7 @@ body {
 /* ------------------------------------------------------------- */
 
 /* ------------------------------------------------------------- */
-/* HEADER SECTION - TITLE & ACTION AREA */
+/* HEADER SECTION, TITLE & ACTION AREA */
 /* ------------------------------------------------------------- */
 .header {
   display: flex;
@@ -69,7 +69,7 @@ h1 {
 /* ------------------------------------------------------------- */
 
 /* ------------------------------------------------------------- */
-/* MAIN AREA - TEAM BUILDER STRUCTURE */
+/* MAIN AREA, TEAM BUILDER STRUCTURE */
 /* ------------------------------------------------------------- */
 .main-content {
   display: flex;
@@ -93,7 +93,7 @@ h1 {
   align-items: center;
 }
 
-/* Team slot indicators - glowing dots for visual clarity */
+/* Team slot indicators, glowing dots for visual clarity */
 .team-limits {
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@ h1 {
 /* ------------------------------------------------------------- */
 
 /* ------------------------------------------------------------- */
-/* TEAM SLOTS - DRAG AND DROP TARGETS */
+/* TEAM SLOTS, DRAG AND DROP TARGETS */
 /* ------------------------------------------------------------- */
 .team-slots {
   display: flex;
@@ -213,7 +213,7 @@ h1 {
 /* ------------------------------------------------------------- */
 
 /* ------------------------------------------------------------- */
-/* CHARACTER LIST - AVAILABLE HEROES */
+/* CHARACTER LIST, AVAILABLE HEROES */
 /* ------------------------------------------------------------- */
 .character-list {
   display: flex;
@@ -297,7 +297,7 @@ h1 {
 /* ------------------------------------------------------------- */
 
 /* ------------------------------------------------------------- */
-/* CHARACTER INFO MODAL - POPUP DESIGN */
+/* CHARACTER INFO MODAL, POPUP DESIGN */
 /* ------------------------------------------------------------- */
 .character-modal {
   display: none;
